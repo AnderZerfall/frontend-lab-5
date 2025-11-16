@@ -1,0 +1,59 @@
+.nav__list {
+  display: flex;
+  gap: var(--spacing--4x);
+}
+
+.nav__item {
+  color: var(--color-text);
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+}
+
+.nav__item:hover {
+  color: var(--color-primary);
+}
+
+[data-link-name] {
+  position: relative;
+}
+
+#mission-link:hover::before {
+  content: "🎯";
+  display: block;
+  position: absolute;
+  left: calc(-1 * var(--spacing--3x));
+}
+
+#founders-link:hover::before {
+  content: "💻";
+  display: block;
+  position: absolute;
+  left: calc(-1 * var(--spacing--3x));
+}
+
+#projects-link:hover::before {
+  content: "🚀";
+  display: block;
+  position: absolute;
+  left: calc(-1 * var(--spacing--3x));
+}
+
+#reviews-link:hover::before {
+  content: "⭐";
+  display: block;
+  position: absolute;
+  left: calc(-1 * var(--spacing--3x));
+}
+
+#profile-link:hover::before {
+  content: "👦🏻";
+  display: block;
+  position: absolute;
+  left: calc(-1 * var(--spacing--3x));
+}
+
+@media (max-width: 1200px) {
+  .nav__list {
+    gap: var(--spacing--2x);
+  }
+}

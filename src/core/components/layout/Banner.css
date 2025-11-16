@@ -1,0 +1,14 @@
+.banner-block {
+  align-items: center;
+  text-align: center;
+}
+
+.banner-block__headline {
+  margin: var(--spacing--8x) 0;
+}
+
+.banner-block__container {
+  background-color: var(--color-accent);
+  color: var(--color-text--accent);
+  border-radius: var(--spacing--2x);
+}

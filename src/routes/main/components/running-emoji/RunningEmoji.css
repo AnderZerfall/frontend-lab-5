@@ -1,0 +1,42 @@
+.emoji-block {
+  position: relative;
+
+  overflow: hidden;
+  padding: var(--spacing--8x) 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing--8x);
+}
+
+.emoji-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 40%,
+    var(--color-background) 100%
+  );
+}
+
+.emoji {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: var(--font-size--2x);
+  letter-spacing: var(--spacing--16x);
+  animation: running-emoji 10s linear infinite;
+}
+
+@keyframes running-emoji {
+  0% {
+    transform: translateX(-52%);
+  }
+  100% {
+    transform: translateX(52%);
+  }
+}

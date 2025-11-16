@@ -1,0 +1,31 @@
+import { SectionLayout } from "../../core/components/layout/SectionLayout";
+import { Banner } from "./components/banner/Banner";
+import { FounderTable } from "./components/founder/FounderTable";
+import { MissionCard } from "./components/mission-card/MissionCard";
+import { RunningEmoji } from "./components/running-emoji/RunningEmoji";
+import { missions } from "./configs";
+
+enum MainPageBlocks {
+  Mission = "mission",
+  Founders = "founders",
+}
+
+export const MainPage = () => {
+  const renderMissions = () =>
+    missions.map((props) => (
+      <MissionCard {...props} key={`card-${props.title}`} />
+    ));
+
+  return (
+    <>
+      <Banner />
+      <SectionLayout name={MainPageBlocks.Mission} title="Our Mission">
+        <div className="mission__cards">{renderMissions()}</div>
+        <RunningEmoji />
+      </SectionLayout>
+      <SectionLayout name={MainPageBlocks.Founders} title="Founders">
+        <FounderTable />
+      </SectionLayout>
+    </>
+  );
+};

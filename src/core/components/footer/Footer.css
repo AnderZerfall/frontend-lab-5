@@ -1,0 +1,49 @@
+.footer {
+  padding: var(--spacing--8x);
+  background-color: var(--color-secondary);
+  border-radius: var(--spacing--2x);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: var(--spacing--4x);
+  margin: 0 auto;
+  padding: 0 var(--spacing--2x);
+}
+
+.footer__logo a {
+  font-size: var(--font-size--4x);
+}
+
+.footer__logo {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.footer__contact-item {
+  margin-bottom: var(--spacing);
+}
+
+.footer__contact-item a {
+  text-decoration: none;
+  color: hsl(245, 19%, 73%);
+  transition: all 2s ease-in-out;
+}
+
+.footer__contact-item a::selection {
+  background-color: var(--color-accent--selection);
+  color: hsl(246, 19%, 83%);
+}
+
+.footer__contact-item a:focus {
+  background-color: hsla(255, 70%, 66%, 0.6);
+  color: hsl(246, 19%, 83%);
+  font-size: 110%;
+  padding: var(--spacing) var(--spacing--2x);
+  border-radius: var(--spacing);
+  outline: none;
+}
