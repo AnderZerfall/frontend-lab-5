@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
-import "./BaseLayout.css"
+import "./BaseLayout.css";
 
 export interface SectionLayoutProps {
   name: string;

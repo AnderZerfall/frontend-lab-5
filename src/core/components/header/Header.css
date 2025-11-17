@@ -1,4 +1,3 @@
-
 .header {
   margin: 0 auto;
   width: 100%;
@@ -24,7 +23,6 @@
   padding: var(--spacing--4x) 0;
 }
 
-
 .header__cta {
   display: flex;
   gap: var(--spacing--2x);
@@ -37,7 +35,7 @@
 }
 
 @media (max-width: 880px) {
-  .header__nav {
+  .header .nav__list {
     display: none;
   }
 

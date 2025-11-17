@@ -52,6 +52,16 @@
   left: calc(-1 * var(--spacing--3x));
 }
 
+@media (max-width: 880px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing--3x);
+  }
+}
+
 @media (max-width: 1200px) {
   .nav__list {
     gap: var(--spacing--2x);

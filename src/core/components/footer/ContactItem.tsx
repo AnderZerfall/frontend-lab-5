@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { LinkType } from "../../domain/constants/LinkType";
 import { getLinkByType } from "../../utils/linkBuilder";
-import "./Footer.css"
+import "./Footer.css";
 
 export interface ContactItemProps {
   type: LinkType;

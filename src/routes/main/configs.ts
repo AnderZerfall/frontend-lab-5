@@ -1,19 +1,23 @@
-import type { MissionCardProps } from "./components/mission-card/MissionCard";
+import type { FounderContent } from "./models/Founder";
+import type { MissionContent } from "./models/Mission";
 
-export const missions: MissionCardProps[] = [
+export const missions: MissionContent[] = [
   {
+    id: "mission-1",
     title: "Mission 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, assumenda.",
     imageLink: "/images/icons/mission/star.svg",
   },
   {
+    id: "mission-2",
     title: "Mission 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, assumenda.",
     imageLink: "/images/icons/mission/github.svg",
   },
   {
+    id: "mission-3",
     title: "Mission 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, assumenda.",
@@ -21,7 +25,7 @@ export const missions: MissionCardProps[] = [
   },
 ];
 
-export const founders = [
+export const founders: FounderContent[] = [
   {
     id: "anderzerfall-task",
     name: "Ander - FUKURO",

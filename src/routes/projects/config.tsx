@@ -1,7 +1,8 @@
-import type { SlideProps } from "./components/Slide";
+import type { SlideContent } from "./models/Slide";
 
-export const slidesContent: SlideProps[] = [
+export const slidesContent: SlideContent[] = [
   {
+    id: "doodly-do",
     title: "Doodly Do - Next.js online drawing board",
     subtitle: (
       <span className="card__subtitle">
@@ -26,6 +27,7 @@ export const slidesContent: SlideProps[] = [
     ],
   },
   {
+    id: "k-dolingua",
     title: "K-lingua - Landing",
     subtitle: (
       <span className="card__subtitle">
@@ -44,6 +46,7 @@ export const slidesContent: SlideProps[] = [
     ],
   },
   {
+    id: "github-kanban",
     title: "Github Kanban - Drag&Drop Issue Manager",
     subtitle: (
       <span className="card__subtitle">

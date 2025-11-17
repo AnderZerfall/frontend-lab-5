@@ -3,11 +3,13 @@ import { Navigation } from "../navigation/Navigation";
 import { Link } from "react-router-dom";
 import { contacts } from "./config";
 import { links } from "../navigation/config";
-import "./Footer.css"
+import "./Footer.css";
 
 export const Footer = () => {
   const renderContactBlock = () =>
-    contacts.map((props) => <ContactItem {...props} key={`item-${props.title}`} />);
+    contacts.map((props) => (
+      <ContactItem {...props} key={`item-${props.title}`} />
+    ));
 
   return (
     <footer className="footer">

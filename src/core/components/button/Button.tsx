@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import type { ComponentProps, ReactNode } from "react";
-import "./Button.css"
+import "./Button.css";
 
 export type ButtonVariant = "primary" | "secondary" | "accent";
 
@@ -15,9 +15,16 @@ const BUTTON_VARIANT_MAP = {
   accent: "button--accent",
 };
 
-export const Button = ({ children, variant = "primary" }: ButtonProps) => {
+export const Button = ({
+  children,
+  variant = "primary",
+  ...props
+}: ButtonProps) => {
   return (
-    <button className={classNames("button", BUTTON_VARIANT_MAP[variant])}>
+    <button
+      {...props}
+      className={classNames("button", BUTTON_VARIANT_MAP[variant])}
+    >
       {children}
     </button>
   );

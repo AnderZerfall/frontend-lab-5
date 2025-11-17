@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import "./BurgerMenu.css"
+import "./BurgerMenu.css";
 
 export interface BurgerMenuButtonProps {
   isOpen?: boolean;
@@ -16,7 +16,7 @@ export const BurgerMenuButton = ({
         "burger-menu-opened": isOpen,
       })}
       onClick={onClick}
-      is-opened={isOpen}
+      is-opened={isOpen ? "true" : "false"}
     />
   );
 };

@@ -1,4 +1,4 @@
 export enum LinkStyles {
-    Button = "button",
-    Default = "default"
+  Button = "button",
+  Default = "default",
 }

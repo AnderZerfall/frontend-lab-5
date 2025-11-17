@@ -1,5 +1,5 @@
 export enum LinkType {
-    Email = "mailto",
-    Phone = "tel",
-    Default = "default"
+  Email = "mailto",
+  Phone = "tel",
+  Default = "default",
 }

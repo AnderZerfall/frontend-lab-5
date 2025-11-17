@@ -7,13 +7,13 @@ import { useState } from "react";
 import { BurgerMenuButton } from "../burger-menu/BurgerMenuButton";
 import { router } from "../../../routes/routes";
 
-import "./Header.css"
+import "./Header.css";
 
 export const Header = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const filteredLinks = links.filter(
-    (link) => link.title.toLowerCase() !== "contacts"
+    (link) => link.title.toLowerCase() !== "contacts",
   );
 
   const toggleBurgerMenu = () => setIsOpen((prev) => !prev);
@@ -29,7 +29,9 @@ export const Header = () => {
           <Navigation links={filteredLinks} />
           <div className="header__cta">
             <Button onClick={() => navigate(router.contact)}>Contact</Button>
-            <Button onClick={() => navigate(router.signup)} variant="secondary">Sign Up</Button>
+            <Button onClick={() => navigate(router.signup)} variant="secondary">
+              Sign Up
+            </Button>
           </div>
         </div>
       </header>

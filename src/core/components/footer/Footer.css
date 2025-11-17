@@ -9,7 +9,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: var(--spacing--4x);
   margin: 0 auto;
   padding: 0 var(--spacing--2x);

@@ -3,7 +3,7 @@ import type { NavigationLink } from "../../domain/models/NavigationLink";
 import { Button } from "../button/Button";
 import { Navigation } from "../navigation/Navigation";
 import { router } from "../../../routes/routes";
-import "./BurgerMenu.css"
+import "./BurgerMenu.css";
 
 export interface BurgerMenuProps {
   links: NavigationLink[];
@@ -18,7 +18,7 @@ export const BurgerMenu = ({ links, isOpen }: BurgerMenuProps) => {
   }
 
   return (
-    <div className="header__burger-menu">
+    <div className="header__burger-menu" is-opened={isOpen ? "true" : "false"}>
       <Navigation links={links} />
       <div className="header__cta">
         <Button onClick={() => navigate(router.contact)}>Contact</Button>

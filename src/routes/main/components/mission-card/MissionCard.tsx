@@ -1,15 +1,12 @@
-import "./MissionCard.css"
+import type { MissionContent } from "../../models/Mission";
+import "./MissionCard.css";
 
 export interface MissionCardProps {
-  title: string;
-  description: string;
-  imageLink: string;
+  missionContent: MissionContent;
 }
 
 export const MissionCard = ({
-  title,
-  description,
-  imageLink,
+  missionContent: { title, description, imageLink },
 }: MissionCardProps) => {
   return (
     <article className="card mission-block__card">

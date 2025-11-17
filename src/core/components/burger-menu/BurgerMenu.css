@@ -11,7 +11,6 @@
   font-size: var(--font-size--2x);
 }
 
-
 .header__burger-icon[is-opened="true"]::after {
   content: "😋";
   display: block;

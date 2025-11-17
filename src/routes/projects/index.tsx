@@ -8,13 +8,12 @@ enum ProjectPageBlocks {
 }
 
 export const ProjectsPage = () => {
-
   return (
     <>
       <DefaultBanner title="🗂️ Projects" />
       <SectionLayout name={ProjectPageBlocks.Projects}>
         <div className="container projects-block__container">
-          <Slider content={slidesContent}/>
+          <Slider slidesContent={slidesContent} />
         </div>
       </SectionLayout>
     </>

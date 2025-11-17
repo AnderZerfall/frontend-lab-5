@@ -61,92 +61,30 @@ textarea::placeholder {
   opacity: 0.7;
 }
 
-
-.hero-block {
-  align-items: center;
-  text-align: center;
+.card {
+  flex: 1;
+  display: flex;
+  padding: var(--spacing--4x);
+  border-radius: var(--spacing);
 }
 
-.hero-block__container {
-  position: relative;
-  min-height: var(--size--12x);
+.card__headline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
 }
 
-.hero-block__container {
-  background-color: var(--color-accent);
-  color: var(--color-text--accent);
-  border-radius: var(--spacing--2x);
+.card__subtitle {
+  font-size: var(--font-size);
+  color: var(--color-text--secondary);
 }
 
-
-/*  Lab 2 Task 1.1 Position absolute for the logo, 0 from top */
-
-.hero-block__headline {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(50%);
+.card:hover .card__image {
+  filter: grayscale(0);
 }
 
-.hero-block__title {
-  position: relative;
-  -webkit-text-stroke: 2px var(--color-primary);
-}
-
-.hero-block__title::after {
-  content: "FUKURO";
-  display: block;
-  position: absolute;
-  color: transparent;
-  top: var(--spacing--2x);
-}
-
-.hero-block__title::before {
-  content: "·";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-text-stroke: none;
-  transform: translateX(-80%) translateY(-2%) scale(0.8);
-  animation: eye-moving 3s ease-in-out infinite 1s;
-}
-
-@keyframes eye-moving {
-  0% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
-  45% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
-  50% {
-    transform: translateX(-60%) translateY(-2%) scale(0.8);
-  }
-  60% {
-    transform: translateX(-60%) translateY(-2%) scale(0.8);
-  }
-  65% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
-
-  70% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
-
-  75% {
-    transform: translateX(-100%) translateY(-2%) scale(0.8);
-  }
-
-  80% {
-    transform: translateX(-100%) translateY(-2%) scale(0.8);
-  }
-
-  85% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
-  100% {
-    transform: translateX(-80%) translateY(-2%) scale(0.8);
-  }
+.card__text {
+  opacity: 0.7;
 }
 
 .mission__cards {
@@ -169,28 +107,13 @@ textarea::placeholder {
   gap: var(--spacing--4x);
 }
 
-
-
 @media (max-width: 1200px) {
-
-  .hero-block__title::after {
-    top: var(--spacing);
-  }
-
-  .hero-block__container {
-    min-height: var(--size--8x);
-  }
-
   .mission-block__cards {
     flex-wrap: wrap;
   }
 
   .mission-block .card {
     min-width: var(--size--8x);
-  }
-
-  .hero-block__headline {
-    top: 10%;
   }
 
   h1 {

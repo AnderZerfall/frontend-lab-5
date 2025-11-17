@@ -1,7 +1,12 @@
-import { founders, techStack } from "../../configs";
+import { techStack } from "../../configs";
+import type { FounderContent } from "../../models/Founder";
 import "./Founder.css";
 
-export const FounderTable = () => {
+export interface FounderTableProps {
+  founders: FounderContent[];
+}
+
+export const FounderTable = ({ founders }: FounderTableProps) => {
   const roles = founders
     .map((founder) => founder.role)
     .filter((role, index, self) => self.indexOf(role) === index);
@@ -9,7 +14,7 @@ export const FounderTable = () => {
   const renderRoles = () =>
     roles.map((role, idx) => {
       const rolesCount = founders.filter(
-        (founder) => founder.role === role
+        (founder) => founder.role === role,
       ).length;
 
       return (
@@ -19,33 +24,28 @@ export const FounderTable = () => {
       );
     });
 
-    
   const renderStack = () =>
     roles.map((role, idx) => {
       const rolesCount = founders.filter(
-        (founder) => founder.role === role
+        (founder) => founder.role === role,
       ).length;
 
-      const stack = techStack.filter(
-        (stack) => stack.role === role
-      )[0];
+      const stack = techStack.filter((stack) => stack.role === role)[0];
 
-       return  <td
-        key={idx}
-        className="founders__stack"
-        colSpan={rolesCount}
-      >
-        <div className="founders__icons">
-          {stack.techStack.map((tech) => (
-            <img
-              key={tech.alt}
-              src={tech.src}
-              alt={tech.alt}
-              className="founders__icon"
-            />
-          ))}
-        </div>
-      </td>
+      return (
+        <td key={idx} className="founders__stack" colSpan={rolesCount}>
+          <div className="founders__icons">
+            {stack.techStack.map((tech) => (
+              <img
+                key={tech.alt}
+                src={tech.src}
+                alt={tech.alt}
+                className="founders__icon"
+              />
+            ))}
+          </div>
+        </td>
+      );
     });
 
   return (
