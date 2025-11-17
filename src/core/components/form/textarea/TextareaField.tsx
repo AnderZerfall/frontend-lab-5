@@ -1,5 +1,5 @@
 import type { ChangeEvent } from "react";
-import { Tooltip } from "../../../core/components/tooltip/Tooltip";
+import { Tooltip } from "../../tooltip/Tooltip";
 
 interface TextareaFieldProps {
   label: string;

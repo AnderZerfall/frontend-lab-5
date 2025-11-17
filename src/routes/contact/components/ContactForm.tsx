@@ -1,12 +1,15 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Button } from "../../../core/components/button/Button";
-import { CheckboxField } from "./CheckboxField";
-import { InputField } from "./InputField";
-import { SelectField, type SelectOption } from "./Select";
-import { TextareaField } from "./TextareaField";
+import { CheckboxField } from "../../../core/components/form/checkbox/CheckboxField";
+import {
+  SelectField,
+  type SelectOption,
+} from "../../../core/components/form/select/SelectField";
+import { TextareaField } from "../../../core/components/form/textarea/TextareaField";
 import type { ContactFormData } from "../models/ContactFormData";
 
 import "./Contact.css";
+import { InputField } from "../../../core/components/form/input/InputField";
 
 interface FieldsetProps {
   formData: ContactFormData;
